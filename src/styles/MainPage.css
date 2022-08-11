@@ -1,0 +1,20 @@
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../../public/background.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  gap: 54px;
+  width: 1352px;
+  height: 806px;
+  background-image: url(../../public/substrate_main_page.png);
+}
