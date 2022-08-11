@@ -1,0 +1,85 @@
+.shop-page {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px;
+  background: #0E170D;
+  height: 100vh;
+}
+
+.shop-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 90px;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.shop-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.shop-navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  gap: 50px;
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0px;
+  gap: 50px;
+  overflow: auto;
+  order: 2;
+  flex-grow: 1;
+}
+
+.products-list-row {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 50px;
+  width: 1350px;
+}
+
+.product-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  /* background: #74755D; */
+  /* background-image: url(../../public/var=1.png); */
+  border-radius: 10px;
+  width: 300px;
+  height: 320px;
+}
+
+.product-item-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 0px 10px 20px;
+  gap: 10px;
+  order: 1;
+
+  font-family: 'Bellota Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  letter-spacing: 0.07em;
+
+  color: #0E170D;
+}
+
+.product-item-img {
+
+  background: linear-gradient(179.87deg, #C4C4C4 74.6%, rgba(196, 196, 196, 0) 99.89%);
+}
