@@ -18,3 +18,9 @@
   height: 806px;
   background-image: url(../../public/substrate_main_page.png);
 }
+
+.navbar-wrapper {
+  display: flex;
+  padding: 10px 0px;
+  gap: 60px;
+}
