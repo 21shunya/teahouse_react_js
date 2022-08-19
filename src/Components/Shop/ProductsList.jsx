@@ -1,11 +1,16 @@
 import React from "react";
 import ProductItem from "./ProductItem";
 
-function ProductsList(props) {
+function ProductsList({productsList, limit, page}) {
+  let pageItems = []
+  for (let i = (page-1)*limit; i < page*limit; i++) {
+    pageItems.push(productsList[i])
+  }
+
   return (
     <div className="products-list">
-      {props.productsList.map((item) => 
-      <ProductItem key={item.id} item={item} />
+      {pageItems.map((item) => 
+       <ProductItem key={item.id} item={item} /> 
       )}
     </div>
   )
