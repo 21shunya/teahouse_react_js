@@ -5,13 +5,9 @@ import ProductItem from "./ProductItem";
 function ProductsList() {
   return (
     <div className="products-list">
-      <ProductItem item={productsList[0]}/>
-      {/* {productsList.map((item) => 
-        <div key={item.id}>
-          {item.body}
-          <img src={item.img} alt='pic of product' />
-        </div>
-      )} */}
+      {productsList.map((item) => 
+      <ProductItem key={item.id} item={item} />
+      )}
     </div>
   )
 }
