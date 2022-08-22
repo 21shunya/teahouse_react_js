@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { decrementPage, incrementPage } from "../../utils/ChangePages";
 import NumberIcon from "./icons/NumberIcon";
 
 function Pagination({totalCount, limit, setPage, page}) {
@@ -20,11 +21,12 @@ function Pagination({totalCount, limit, setPage, page}) {
     background: transparent;
     width: 31px;
     height: 31px;
+    border: none;
   `
 
   return (
     <PaginationWrapper>
-      <StyledBtn onClick={() => setPage(page-1)}>
+      <StyledBtn onClick={() => decrementPage(page, setPage)}>
         <img src='arrow-left.svg' alt='' />
       </StyledBtn>
       {pageArray.map(p =>
@@ -41,7 +43,7 @@ function Pagination({totalCount, limit, setPage, page}) {
         {p}
       </NumberIcon>
       )}
-      <StyledBtn onClick={() => setPage(page+1)}>
+      <StyledBtn onClick={() => incrementPage(page, totalPages, setPage)}>
         <img src='arrow-right.svg' alt='' />
       </StyledBtn>
     </PaginationWrapper>
