@@ -69,4 +69,10 @@ h3 {
   color: #74755D;
 }
 
+.pagination-wrapper {
+  display: flex;
+  gap: 10px;
+  order: 3;
+}
+
 

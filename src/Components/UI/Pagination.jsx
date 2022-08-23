@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { decrementPage, incrementPage } from "../../utils/ChangePages";
+import ArrowIcon from "./icons/ArrowIcon";
 import NumberIcon from "./icons/NumberIcon";
 
 function Pagination({totalCount, limit, setPage, page}) {
@@ -9,11 +10,7 @@ function Pagination({totalCount, limit, setPage, page}) {
   for (let i = 1; i <= totalPages; i++) {
     pageArray.push(i)
   }
-  const PaginationWrapper = styled.div `
-  display: flex;
-  gap: 10px;
-  order: 3;
-  `
+  
   const StyledBtn = styled.button `
     display: flex;
     justify-conntent: center;
@@ -25,10 +22,10 @@ function Pagination({totalCount, limit, setPage, page}) {
   `
 
   return (
-    <PaginationWrapper>
-      <StyledBtn onClick={() => decrementPage(page, setPage)}>
+    <div className="pagination-wrapper">
+      <ArrowIcon onClick={() => decrementPage(page, setPage)}>
         <img src='arrow-left.svg' alt='' />
-      </StyledBtn>
+      </ArrowIcon>
       {pageArray.map(p =>
       page === p 
       ? <NumberIcon
@@ -43,10 +40,10 @@ function Pagination({totalCount, limit, setPage, page}) {
         {p}
       </NumberIcon>
       )}
-      <StyledBtn onClick={() => incrementPage(page, totalPages, setPage)}>
+      <ArrowIcon onClick={() => incrementPage(page, totalPages, setPage)}>
         <img src='arrow-right.svg' alt='' />
-      </StyledBtn>
-    </PaginationWrapper>
+      </ArrowIcon>
+    </div>
   )
 }
 
