@@ -1,5 +1,4 @@
 export function incrementPage(page, totalPages, setPage) {
-  console.log(page, totalPages)
   if (page < totalPages) {
     setPage(page + 1)
   }
@@ -7,7 +6,14 @@ export function incrementPage(page, totalPages, setPage) {
 
 export function decrementPage(page, setPage) {
   if (page > 1) {
-    console.log('decr')
     setPage(page - 1)
   }
+}
+
+export function getPageItems(itemList, limit, page) {
+  let pageItems = []
+  for (let i = (page - 1) * limit; i < page * limit; i++) {
+    if( i < itemList.length) pageItems.push(itemList[i])
+ }
+ return pageItems
 }
