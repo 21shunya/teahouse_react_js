@@ -1,0 +1,155 @@
+.sh-page-item {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  padding: 30px 0px;
+  gap: 58px;
+  background: #0E170D;
+  overflow-y: hidden;
+}
+
+.sh-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  order: 1;
+}
+
+.sh-item-image {
+  width: 670px;
+  height: 670px;
+  margin: 0px -70px;
+}
+
+.sh-item-descr-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  isolation: isolate;
+  order: 1;
+  width: 1320.17px;
+}
+
+.sh-p-title-substrate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 505.15px;
+  height: 505.15px;
+  margin: 0px -240px;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-image: url(../../public/title-substrate.svg)
+}
+
+.sh-p-title-wrapper {
+  position: absolute;
+  width: 453px;
+  height: 454px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  color: #F5F4F0;
+  background-image: url(../../public/title-background.png);
+}
+
+.sh-p-title-h1 {
+  width: 415px;
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.sh-p-title-h5 {
+  width: 142px;
+  font-family: 'Bellota Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  margin-bottom: 70px;
+}
+
+.sh-p-descr-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  order: 1;
+}
+
+.descr-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 21px;
+  background: #C1C0B4;
+  width: 256px;
+  height: 760px;
+}
+
+.descr-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 30px 10px 10px 15px;
+  gap: 10px;
+  
+  width: 799px;
+  height: 760px;
+  overflow-y: auto;
+  
+  background: #BCBBAF;
+}
+
+.adding-to-cart {
+  display: flex;
+  flex-direction: column;
+  padding: 0px;
+  gap: 24px;
+  width: 213px;
+}
+
+.adding-to-cart-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cost-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
+  border-top: 1px solid #0E170D;
+  order: 1;
+  align-self: stretch;
+  font-family: 'Bellota Text';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+
+  letter-spacing: 0.07em;
+
+  color: #0E170D;
+}
+
+.quantity-change-wrapper {
+  display: flex;
+  align-self: stretch;
+}

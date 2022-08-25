@@ -2,11 +2,14 @@ import React from "react";
 import ShopNavbar from "./ShopNavbar";
 import Logo from "../Logo"
 
-function ShopHeader() {
+function ShopHeader(props) {
   return (
     <div className="shop-header">
       <Logo />
-      <ShopNavbar />
+      {props.ProductItem 
+      ? <ShopNavbar />
+      : <ShopNavbar />
+      }
     </div>
   )
 }
