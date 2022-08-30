@@ -1,3 +1,5 @@
+import { arr } from "./productList"
+
 export function incrementPage(page, totalPages, setPage) {
   if (page < totalPages) {
     setPage(page + 1)
@@ -10,10 +12,28 @@ export function decrementPage(page, setPage) {
   }
 }
 
-export function getPageItems(itemList, limit, page) {
-  let pageItems = []
-  for (let i = (page - 1) * limit; i < page * limit; i++) {
-    if( i < itemList.length) pageItems.push(itemList[i])
- }
- return pageItems
+export function getPaginatedItems(p) {
+  const offset = p?.offset || 0;
+  const limit = p?.limit || 20;
+
+  const allData = arr.filter(item => {
+    if (p?.query && item.title.toLowerCase().includes(p.query.toLowerCase())) {
+      return item;
+    }
+    if (!p?.query) {
+      return item;
+    }
+  });
+
+  const slicedData = allData.slice(offset, offset + limit);
+
+  return {
+    totalLength: allData.length,
+    data: slicedData
+  }
+
+}
+
+export function getItemById(id) {
+  return arr.filter(item => item.id === id).shift()
 }

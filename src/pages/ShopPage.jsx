@@ -1,28 +1,27 @@
-import React, { useState } from "react";
-import productsList from"../productsList.json"
+import React, { useEffect, useState } from "react";
 import ProductsList from "../Components/Shop/ProductsList";
 import ShopHeader from "../Components/Shop/ShopHeader";
 import Input from "../Components/UI/inputs/Input";
 import "../styles/ShopPage.css"
 import Pagination from "../Components/UI/Pagination";
-import { getPageItems } from "../utils/ChangePages"
+import { getPaginatedItems } from "../utils/ChangePages"
 
 function ShopPage() {
   const [search, setSearch] = useState('');
-   const [totalCount, setTotalCount] = useState(productsList.length);
-   const [limit, setLimit] = useState(4)
-   const [page, setPage] = useState(1);
+  const [total, setTotal] = useState(0);
+  const [limit, setLimit] = useState(4)
+  const [page, setPage] = useState(1);
+  const [data, setData] = useState([]);
 
-  function getSearchedProducts() {
-    let searchedList = []
-    if(search) {
-      searchedList = productsList.filter(item => item.title.toLowerCase().includes(search.toLowerCase()))
-      return getPageItems(searchedList, limit, page)
-    }
-    return getPageItems(productsList, limit, page)
-  }
+  useEffect(() => {
+    const newData = getPaginatedItems({query: search, limit, offset: (page - 1) * 4});
+    setData(newData.data);
+    setTotal(newData.totalLength);
+  }, [search, page]);
 
-  const searchedProducts = getSearchedProducts()
+  useEffect(() => {
+    setPage(1);
+  }, [search])
 
   return (
     <div className="shop-page">
@@ -35,8 +34,8 @@ function ShopPage() {
           onChange={e => setSearch(e.target.value)}
           type="text"
         />
-        <ProductsList productsList={searchedProducts} limit={limit} page={page}/>
-        <Pagination totalCount={totalCount} limit={limit} setPage={setPage} page={page}/>
+        <ProductsList productsList={data} limit={limit} page={page}/>
+        <Pagination totalCount={total} limit={limit} setPage={setPage} page={page}/>
       </div>
       <img src="shop-page-picture.png" alt=""/>
     </div>

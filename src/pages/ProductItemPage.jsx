@@ -3,12 +3,12 @@ import DescriptionForm from "../Components/Shop/ProductItem/DescriptionForm";
 import ShopHeader from "../Components/Shop/ShopHeader";
 import ProductItemTitle from "../Components/Shop/ProductItem/ProductItemTitle";
 import "../styles/ShPageItem.css"
-import productsList from "../productsList.json"
 import { useParams } from "react-router-dom";
+import { getItemById } from "../utils/ChangePages";
 
 function ProductItemPage() {
   const params = useParams();
-  const productItem = productsList[params.id - 1]
+  const productItem = getItemById(params.id - 1);
   
   return (
     <div className="sh-page-item">

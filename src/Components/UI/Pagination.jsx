@@ -10,16 +10,6 @@ function Pagination({totalCount, limit, setPage, page}) {
   for (let i = 1; i <= totalPages; i++) {
     pageArray.push(i)
   }
-  
-  const StyledBtn = styled.button `
-    display: flex;
-    justify-conntent: center;
-    align-items: center;
-    background: transparent;
-    width: 31px;
-    height: 31px;
-    border: none;
-  `
 
   return (
     <div className="pagination-wrapper">
