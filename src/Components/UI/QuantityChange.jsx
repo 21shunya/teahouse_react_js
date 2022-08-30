@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import SmallArrowIcon from "../UI/icons/SmallArrowIcon"
 import PrimaryBtn from "./buttons/PrimaryBtn";
+import arrowTop from"../../assets/small-arrow-top.svg"
+import arrowBottom from"../../assets/small-arrow-bottom.svg"
 
 function QuantityChange(props) {
   const Container = styled.div `
@@ -20,10 +22,10 @@ function QuantityChange(props) {
       <PrimaryBtn {...props}/>
       <BtnContainer>
         <SmallArrowIcon>
-          <img src="small-arrow-top.svg" alt=""/>
+          <img src={arrowTop} alt=""/>
         </SmallArrowIcon>
         <SmallArrowIcon>
-          <img src="small-arrow-bottom.svg" alt=""/>
+          <img src={arrowBottom} alt=""/>
         </SmallArrowIcon>
       </BtnContainer>
     </Container>

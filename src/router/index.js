@@ -5,5 +5,5 @@ import ProductItemPage from "../pages/ProductItemPage";
 export const routes = [
   { path: '/', element: <MainPage /> },
   { path: '/shop', element: <ShopPage /> },
-  { path: '/shop1', element: <ProductItemPage /> },
+  { path: '/shop/:id', element: <ProductItemPage /> },
 ]
