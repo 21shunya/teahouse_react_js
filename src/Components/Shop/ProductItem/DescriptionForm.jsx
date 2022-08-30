@@ -2,10 +2,10 @@ import React from "react";
 import SecondaryBtn from "../../UI/buttons/SecondaryBtn"
 import AddingToCart from "./AddingToCart";
 
-function DescriptionForm() {
+function DescriptionForm({productItem}) {
   return (
     <div className="descr-form">
-      <AddingToCart />
+      <AddingToCart productItem={productItem}/>
       <SecondaryBtn>В избранное</SecondaryBtn>
     </div>
   )

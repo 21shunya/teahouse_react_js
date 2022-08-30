@@ -5,10 +5,10 @@ function ProductItem(props) {
 
   return (
     <div className="product-item-wrapper">
-      <div style={{backgroundImage: `url(${item.img})`}} className="product-item-img-wrapper">
+      <div style={{backgroundImage: `url(${item.imgPath})`}} className="product-item-img-wrapper">
         <div className="pr-item-img-gradient"></div>
       </div>
-      <div className="product-item-text">{item.body}</div>
+      <div className="product-item-text">{item.title}</div>
     </div>
   )
 }

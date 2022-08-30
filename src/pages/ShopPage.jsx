@@ -16,7 +16,7 @@ function ShopPage() {
   function getSearchedProducts() {
     let searchedList = []
     if(search) {
-      searchedList = productsList.filter(item => item.body.toLowerCase().includes(search.toLowerCase()))
+      searchedList = productsList.filter(item => item.title.toLowerCase().includes(search.toLowerCase()))
       return getPageItems(searchedList, limit, page)
     }
     return getPageItems(productsList, limit, page)
