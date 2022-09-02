@@ -23,6 +23,11 @@
   align-self: stretch;
 }
 
+.product-item {
+  justify-content: flex-start;
+  gap: 260px;
+}
+
 .shop-navbar {
   display: flex;
   justify-content: center;
@@ -55,6 +60,7 @@
   
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .product-item-img-wrapper {

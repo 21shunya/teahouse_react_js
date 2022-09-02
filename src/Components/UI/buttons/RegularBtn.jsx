@@ -12,6 +12,13 @@ const StyledBtn = styled.button `
   padding: 0;
   background: transparent;
   border: none;
+  &:hover {
+    text-shadow: 0px 1px 20px #D7CFB9;
+  }
+  &:active {
+    font-weight: 900;
+    
+  }
 `
 
 function RegularBtn(props) {

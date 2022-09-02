@@ -12,8 +12,14 @@ function ArrowIcon(props) {
     border: none;
   `
 
+
   return (
-    <StyledBtn {...props} />
+    <StyledBtn {...props}>
+      {props.left
+      ? <img src='arrow-left.svg' alt='' />
+      : <img src='arrow-right.svg' alt='' />
+      }
+    </StyledBtn>
   )
 }
 

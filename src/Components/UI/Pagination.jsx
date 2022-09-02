@@ -13,9 +13,7 @@ function Pagination({totalCount, limit, setPage, page}) {
 
   return (
     <div className="pagination-wrapper">
-      <ArrowIcon onClick={() => decrementPage(page, setPage)}>
-        <img src='arrow-left.svg' alt='' />
-      </ArrowIcon>
+      <ArrowIcon left onClick={() => decrementPage(page, setPage)} />
       {pageArray.map(p =>
       page === p 
       ? <NumberIcon
@@ -30,9 +28,7 @@ function Pagination({totalCount, limit, setPage, page}) {
         {p}
       </NumberIcon>
       )}
-      <ArrowIcon onClick={() => incrementPage(page, totalPages, setPage)}>
-        <img src='arrow-right.svg' alt='' />
-      </ArrowIcon>
+      <ArrowIcon right onClick={() => incrementPage(page, totalPages, setPage)} />
     </div>
   )
 }

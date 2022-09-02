@@ -16,6 +16,14 @@ const StyledBtn = styled.button `
   letter-spacing: 0.07em;
   color: #74755D;
   background: transparent;
+  &:hover {
+    background: #74755D;
+    color: #F5F4F0;
+  }
+  &:active {
+    color: #74755D;
+    background: transparent;
+  }
 `
 
 function SecondaryBtn(props) {

@@ -35,5 +35,6 @@ export function getPaginatedItems(p) {
 }
 
 export function getItemById(id) {
+  if (typeof id === 'string') id = Number(id)
   return arr.filter(item => item.id === id).shift()
 }

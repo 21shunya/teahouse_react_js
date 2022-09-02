@@ -6,10 +6,13 @@ import { useNavigate } from 'react-router-dom';
 
 function ShopHeader(props) {
   const navigate = useNavigate();
+  let productItem
+  if (props.ProductItem) productItem = 'product-item'
+
   return (
-    <div className="shop-header">
+    <div className={`shop-header ${productItem}`}>
       <Logo />
-      {props.ProductItem 
+      {productItem
       ? <div className="pr-item-navbar">
           <RegularBtn onClick={() => navigate(-1)}>
             Каталог

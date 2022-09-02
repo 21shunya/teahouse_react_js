@@ -8,7 +8,7 @@ import { getItemById } from "../utils/ChangePages";
 
 function ProductItemPage() {
   const params = useParams();
-  const productItem = getItemById(params.id - 1);
+  const productItem = getItemById(params.id);
   
   return (
     <div className="sh-page-item">
