@@ -1,23 +1,24 @@
-import React, { Children } from "react";
+import React from "react";
 import styled from "styled-components";
+import arrowLeft from "./arrow-left.svg"
+import arrowRight from "./arrow-right.svg"
 
 function ArrowIcon(props) {
-  const StyledBtn = styled.button `
+  const StyledBtn = styled.div `
     display: flex;
-    justify-conntent: center;
+    justify-content: center;
     align-items: center;
     background: transparent;
     width: 31px;
-    height: 31px;
     border: none;
+    cursor: pointer;
   `
-
-
+  
   return (
     <StyledBtn {...props}>
       {props.left
-      ? <img src='arrow-left.svg' alt='' />
-      : <img src='arrow-right.svg' alt='' />
+      ? <img src={arrowLeft} alt='' />
+      : <img src={arrowRight} alt='' />
       }
     </StyledBtn>
   )

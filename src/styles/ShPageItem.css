@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-grow: 1;
+  gap: 50px;
 }
 
 .sh-page-item {
@@ -12,7 +13,7 @@
   align-items: center;
   justify-content: flex-start;
   padding: 30px 90px;
-  gap: 58px;
+  gap: 30px;
   background: #0E170D;
   overflow: auto;
 }
@@ -138,6 +139,11 @@
   color: #000000; 
   order: 1;
   flex-grow: 1; 
+}
+
+@media (max-width: 1420px) {
+  /* .descr-text-wrapper {width: 265px} */
+  .sh-item-descr-title {min-width: 800px} 
 }
 
 .adding-to-cart {

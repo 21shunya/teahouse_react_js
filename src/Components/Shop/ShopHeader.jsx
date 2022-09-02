@@ -3,6 +3,7 @@ import ShopNavbar from "./ShopNavbar";
 import Logo from "../Logo"
 import RegularBtn from "../UI/buttons/RegularBtn";
 import { useNavigate } from 'react-router-dom';
+import ArrowIcon from "../UI/icons/ArrowIcon";
 
 function ShopHeader(props) {
   const navigate = useNavigate();
@@ -14,7 +15,8 @@ function ShopHeader(props) {
       <Logo />
       {productItem
       ? <div className="pr-item-navbar">
-          <RegularBtn onClick={() => navigate(-1)}>
+          <RegularBtn green onClick={() => navigate(-1)}>
+            <ArrowIcon left />
             Каталог
           </RegularBtn>
           <ShopNavbar />
