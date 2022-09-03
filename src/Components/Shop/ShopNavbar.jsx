@@ -5,13 +5,13 @@ import { Link } from "react-router-dom"
 function ShopNavbar() {
   return (
     <div className="shop-navbar">
-      <Link to='/'>
+      <Link to='/cart'>
         <RegularBtn>Корзина</RegularBtn>
       </Link>
-      <Link to='/'>
+      <Link to='/like'>
         <RegularBtn>Избранное</RegularBtn>
       </Link>
-      <Link to='/'>
+      <Link to='/profile'>
         <RegularBtn>Профиль</RegularBtn>
       </Link>
     </div>

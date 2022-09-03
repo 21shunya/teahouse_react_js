@@ -5,19 +5,19 @@ import { Link } from "react-router-dom"
 function MainPageNavbar() {
   return (
     <div className="navbar-wrapper">
-      <Link to='/'>
+      <Link to='/contacts'>
         <RegularBtn>Контакты</RegularBtn>
       </Link>
-      <Link to='/'>
+      <Link to='/events'>
         <RegularBtn>События</RegularBtn>
       </Link>
-      <Link to='/'>
+      <Link to='/menu'>
         <RegularBtn>Меню</RegularBtn>
       </Link>
       <Link to='/shop'>
         <RegularBtn>Магазин</RegularBtn>
       </Link>
-      <Link to='/'>
+      <Link to='/actions'>
         <RegularBtn>Акции</RegularBtn>
       </Link>
     </div>
