@@ -14,10 +14,10 @@ function ErrorPage() {
   
   return (
     <div className={cl.page_wrapper}>
-      <Link className={cl.link} to='/'>Page Not Found</Link>
       <div className={cl.leaves_container}>
+        <Link className={cl.link} to='/'>Page Not Found</Link>
         {leafList.map(item =>
-          <img key={item} className={item.join(' ')} src={leaf} alt='leaf'/> 
+          <img disabled='disabled' key={item} className={item.join(' ')} src={leaf} alt='leaf'/> 
         )}
       </div>
     </div>
