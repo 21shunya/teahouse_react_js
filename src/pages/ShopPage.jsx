@@ -5,6 +5,7 @@ import Input from "../Components/UI/inputs/Input";
 import "../styles/ShopPage.css"
 import Pagination from "../Components/UI/Pagination";
 import { getPaginatedItems } from "../utils/ChangePages"
+import Loader from "../Components/UI/loader/Loader";
 
 function ShopPage() {
   const [search, setSearch] = useState('');
@@ -12,11 +13,17 @@ function ShopPage() {
   const [limit, setLimit] = useState(4)
   const [page, setPage] = useState(1);
   const [data, setData] = useState([]);
+  const [isLoading, setLoading] = useState(true);
 
   useEffect(() => {
-    const newData = getPaginatedItems({query: search, limit, offset: (page - 1) * 4});
-    setData(newData.data);
-    setTotal(newData.totalLength);
+    setLoading(true);
+    setTimeout(() => {
+      const newData = getPaginatedItems({query: search, limit, offset: (page - 1) * 4});
+      setData(newData.data);
+      setTotal(newData.totalLength);
+      setLoading(false);
+    }, 2000);
+    
   }, [search, page]);
 
   useEffect(() => {
@@ -34,7 +41,10 @@ function ShopPage() {
           onChange={e => setSearch(e.target.value)}
           type="text"
         />
-        <ProductsList productsList={data} limit={limit} page={page}/>
+        {isLoading
+        ? <Loader />
+        : <ProductsList productsList={data} limit={limit} page={page}/>
+        }
         <Pagination totalCount={total} limit={limit} setPage={setPage} page={page}/>
       </div>
       <img src="shop-page-picture.png" alt=""/>

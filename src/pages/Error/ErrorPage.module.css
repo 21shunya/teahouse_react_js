@@ -24,8 +24,6 @@
 .link {
   color: #F5F4F0;
   z-index: 1;
-  transform: scale(2, 2);
-  /* animation-name: link_scale; */
 }
 
 .left_leaf {

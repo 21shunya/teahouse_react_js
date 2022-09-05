@@ -5,27 +5,28 @@ import ProductItemTitle from "../Components/Shop/ProductItem/ProductItemTitle";
 import "../styles/ShPageItem.css"
 import { useParams } from "react-router-dom";
 import { getItemById } from "../utils/ChangePages";
+import { useState } from "react";
+import ProductPageContent from "../Components/Shop/ProductItem/ProductPageContent";
+import Loader from "../Components/UI/loader/Loader";
 
 function ProductItemPage() {
+  const [isLoading, setLoading] = useState(true);
+  const [productItem, setProductItem] = useState({});
   const params = useParams();
-  const productItem = getItemById(params.id);
+  
+  setTimeout(() => {
+    setLoading(true)
+    setProductItem(getItemById(params.id));
+    setLoading(false)
+  }, 2000);
   
   return (
     <div className="sh-page-item">
       <ShopHeader ProductItem />
-      <div className="sh-item-wrapper">
-        <img className="sh-item-image" src={require(`../assets/${productItem.imgPath}`)} alt="" />
-        <div className="sh-item-descr-title">
-          <ProductItemTitle productItem={productItem}/>
-          <div className="sh-p-descr-wrapper">
-            <DescriptionForm productItem={productItem}/>
-            <div className="descr-text-wrapper">
-              <span>Описание: {productItem.description}</span>
-              <span>Рекомендации: {productItem.recommens}</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      {isLoading 
+      ? <Loader />
+      : <ProductPageContent productItem={productItem}/>
+      }
     </div>
   )
 }
