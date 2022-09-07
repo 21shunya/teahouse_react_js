@@ -16,6 +16,7 @@ const StyledBtn = styled.button `
   padding: 0;
   background: transparent;
   border: none;
+  gap: 10px;
   &:hover {
     text-shadow: 0px 1px 20px #D7CFB9;
   }

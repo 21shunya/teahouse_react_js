@@ -43,11 +43,13 @@
 
 .leaves_container:hover .left_leaf{
   opacity: 0.9;
+  filter: blur(6px);
   animation-play-state: paused;
 }
 
 .leaves_container:hover .right_leaf {
   opacity: 0.9;
+  filter: blur(6px);
   animation-play-state: paused;
 }
 

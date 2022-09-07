@@ -1,19 +1,28 @@
 import React from "react";
 import RegularBtn from "../UI/buttons/RegularBtn"
 import { Link } from "react-router-dom"
+import NumberIcon from "../UI/icons/NumberIcon"
 
 function ShopNavbar() {
+  const buttonsList = [
+    {name: 'Корзина', value: 0, path: '/cart'},
+    {name: 'Избранное', value: 0, path: '/favourite'},
+    {name: 'Профиль', value: '', path: '/profile'}
+  ]
+
   return (
     <div className="shop-navbar">
-      <Link to='/cart'>
-        <RegularBtn>Корзина</RegularBtn>
+      {buttonsList.map(btn =>
+      <Link to={btn.path}>
+        <RegularBtn>
+          {btn.name}
+          {btn.name !== 'Профиль'
+          ? <NumberIcon filled>{btn.value}</NumberIcon>
+          : null
+          }
+        </RegularBtn>
       </Link>
-      <Link to='/like'>
-        <RegularBtn>Избранное</RegularBtn>
-      </Link>
-      <Link to='/profile'>
-        <RegularBtn>Профиль</RegularBtn>
-      </Link>
+      )}
     </div>
   )
 }

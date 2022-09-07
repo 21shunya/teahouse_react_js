@@ -1,7 +1,5 @@
 import React from "react";
-import DescriptionForm from "../Components/Shop/ProductItem/DescriptionForm";
 import ShopHeader from "../Components/Shop/ShopHeader";
-import ProductItemTitle from "../Components/Shop/ProductItem/ProductItemTitle";
 import "../styles/ShPageItem.css"
 import { useParams } from "react-router-dom";
 import { getItemById } from "../utils/ChangePages";
