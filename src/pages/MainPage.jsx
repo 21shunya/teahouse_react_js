@@ -14,8 +14,8 @@ function MainPage() {
         </div>
         <div className="content">
           <h2>{info.title}</h2>
-          {info.description.map(paragraph =>
-          <p>{paragraph}</p>
+          {info.description.map((paragraph, index) =>
+          <p key={index}>{paragraph}</p>
           )}
         </div>
       </div>
