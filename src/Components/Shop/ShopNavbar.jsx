@@ -13,7 +13,7 @@ function ShopNavbar() {
   return (
     <div className="shop-navbar">
       {buttonsList.map(btn =>
-      <Link to={btn.path}>
+      <Link key={btn.path} to={btn.path}>
         <RegularBtn>
           {btn.name}
           {btn.name !== 'Профиль'

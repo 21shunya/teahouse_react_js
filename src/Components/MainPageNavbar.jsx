@@ -3,23 +3,20 @@ import RegularBtn from "./UI/buttons/RegularBtn";
 import { Link } from "react-router-dom"
 
 function MainPageNavbar() {
+  const buttonsList = [
+    {name: 'Контакты', path: '/contacts'},
+    {name: 'События', path: '/events'},
+    {name: 'Меню', path: '/menu'},
+    {name: 'Магазин', path: '/shop'},
+    {name: 'Акции', path: '/actions'}
+  ]
   return (
     <div className="navbar-wrapper">
-      <Link to='/contacts'>
-        <RegularBtn>Контакты</RegularBtn>
-      </Link>
-      <Link to='/events'>
-        <RegularBtn>События</RegularBtn>
-      </Link>
-      <Link to='/menu'>
-        <RegularBtn>Меню</RegularBtn>
-      </Link>
-      <Link to='/shop'>
-        <RegularBtn>Магазин</RegularBtn>
-      </Link>
-      <Link to='/actions'>
-        <RegularBtn>Акции</RegularBtn>
-      </Link>
+      {buttonsList.map(btn =>
+        <Link key={btn.path} to={btn.path}>
+          <RegularBtn>{btn.name}</RegularBtn>
+        </Link>  
+      )}
     </div>
   )
 }
