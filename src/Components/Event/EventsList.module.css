@@ -11,8 +11,6 @@
   letter-spacing: 0.07em;
   color: whitesmoke;
   gap: 16px;
-  overflow-y: auto;
-  height: 74vh;
 }
 
 .list_item {

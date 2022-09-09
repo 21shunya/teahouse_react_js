@@ -5,11 +5,17 @@
   background: #0E170D;
   padding: 30px;
   gap: 30px;
-  height: 100vh;
+  overflow-y: scroll;
+  height: 92vh;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-self: stretch;
+}
+
+.observed_elem {
+  margin-top: 100px;
+  min-width: 100vh;
 }
