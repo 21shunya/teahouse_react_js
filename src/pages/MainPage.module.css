@@ -1,4 +1,4 @@
-.page-wrapper {
+.page_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,7 +8,7 @@
   background-position: center;
 }
 
-.content-wrapper {
+.content_wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,12 +17,6 @@
   width: 1352px;
   height: 806px;
   background-image: url(../../public/substrate_main_page.png);
-}
-
-.navbar-wrapper {
-  display: flex;
-  padding: 10px 0px;
-  gap: 60px;
 }
 
 .header {
@@ -70,3 +64,8 @@ p {
   margin: 0;
 }
 
+.navbar_wrapper {
+  display: flex;
+  padding: 10px 0px;
+  gap: 60px;
+}

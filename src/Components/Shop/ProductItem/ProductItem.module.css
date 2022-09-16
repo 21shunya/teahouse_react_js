@@ -1,24 +1,4 @@
-.pr-item-navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-grow: 1;
-  gap: 50px;
-}
-
-.sh-page-item {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 30px 90px;
-  gap: 30px;
-  background: #0E170D;
-  overflow: auto;
-}
-
-.sh-item-wrapper {
+.content_wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -27,13 +7,13 @@
   align-self: stretch;
 }
 
-.sh-item-image {
+.product_image {
   height: 670px;
   width: 670px;
   margin: 0 -230px 0 0;
 }
 
-.sh-item-descr-title {
+.description_title {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,56 +26,11 @@
   flex-grow: 1;
 }
 
-.sh-p-title-substrate {
-  display: flex;
-  align-items: center;
-  min-width: 490px;
-  height: 504px;
-  margin: 0 -220px 0 0;
-  z-index: 1;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../../public/title-substrate.svg)
+@media (max-width: 1420px) {
+  .description_title {min-width: 800px} 
 }
 
-.sh-p-title-wrapper {
-  width: 454px;
-  height: 454px;
-  margin-left: 26px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 30px;
-  color: #F5F4F0;
-  background-repeat: no-repeat;
-  background-image: url(../../public/title-background.png);
-}
-
-.sh-p-title-h1 {
-  width: 415px;
-  font-family: 'Cormorant';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 48px;
-  text-align: center;
-  letter-spacing: 0.06em;
-}
-
-.sh-p-title-h5 {
-  width: 148px;
-  font-family: 'Bellota Text';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 17px;
-  line-height: 21px;
-  text-align: center;
-  letter-spacing: 0.07em;
-  margin-bottom: 70px;
-}
-
-.sh-p-descr-wrapper {
+.description_wrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -106,18 +41,7 @@
   z-index: 0; 
 }
 
-.descr-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 20px 21px;
-  background: #C1C0B4;
-  width: 256px;
-  height: 760px;
-}
-
-.descr-text-wrapper {
+.text_wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -141,12 +65,67 @@
   flex-grow: 1; 
 }
 
-@media (max-width: 1420px) {
-  /* .descr-text-wrapper {width: 265px} */
-  .sh-item-descr-title {min-width: 800px} 
+.title_substrate {
+  display: flex;
+  align-items: center;
+  min-width: 490px;
+  height: 504px;
+  margin: 0 -220px 0 0;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../../../../public/title-substrate.svg)
 }
 
-.adding-to-cart {
+.title_wrapper {
+  width: 454px;
+  height: 454px;
+  margin-left: 26px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 30px;
+  color: #F5F4F0;
+  background-repeat: no-repeat;
+  background-image: url(../../../../public/title-background.png);
+}
+
+.title_h1 {
+  width: 415px;
+  font-family: 'Cormorant';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+
+.title_h5 {
+  width: 148px;
+  font-family: 'Bellota Text';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.07em;
+  margin-bottom: 70px;
+}
+
+.descr_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 21px;
+  background: #C1C0B4;
+  width: 256px;
+  height: 760px;
+}
+
+.adding_to_cart {
   display: flex;
   flex-direction: column;
   padding: 0px;
@@ -154,12 +133,12 @@
   width: 213px;
 }
 
-.adding-to-cart-btns {
+.adding_to_cart_btns {
   display: flex;
   justify-content: space-between;
 }
 
-.cost-wrapper {
+.cost_wrapper {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -177,9 +156,4 @@
   letter-spacing: 0.07em;
 
   color: #0E170D;
-}
-
-.quantity-change-wrapper {
-  display: flex;
-  align-self: stretch;
 }

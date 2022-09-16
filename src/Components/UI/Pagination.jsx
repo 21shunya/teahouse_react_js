@@ -11,8 +11,14 @@ function Pagination({totalCount, limit, setPage, page}) {
     pageArray.push(i)
   }
 
+  const StyledDiv = styled.div `
+    display: flex;
+    gap: 10px;
+    order: 3;
+  `
+
   return (
-    <div className="pagination-wrapper">
+    <StyledDiv>
       <ArrowIcon left onClick={() => decrementPage(page, setPage)} />
       {pageArray.map(p =>
       page === p 
@@ -29,7 +35,7 @@ function Pagination({totalCount, limit, setPage, page}) {
       </NumberIcon>
       )}
       <ArrowIcon right onClick={() => incrementPage(page, totalPages, setPage)} />
-    </div>
+    </StyledDiv>
   )
 }
 

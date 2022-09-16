@@ -1,11 +1,12 @@
 import React from "react";
+import cl from "./ProductItem.module.css"
 
 function ProductItemTitle({productItem}) {
   return (
-    <div className="sh-p-title-substrate">
-      <div className="sh-p-title-wrapper">
-        <span className="sh-p-title-h1">{productItem.title}</span>
-        <span className="sh-p-title-h5">{productItem.cost} {productItem.type}</span>
+    <div className={cl.title_substrate}>
+      <div className={cl.title_wrapper}>
+        <span className={cl.title_h1}>{productItem.title}</span>
+        <span className={cl.title_h5}>{productItem.cost} {productItem.type}</span>
       </div>
     </div>
   )

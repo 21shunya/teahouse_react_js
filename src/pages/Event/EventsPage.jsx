@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import EventsList from "../../Components/Event/EventsList";
 import MainPageNavbar from "../../Components/MainPageNavbar"
-import Logo from "../../Components/Logo"
+import Logo from "../../Components/UI/logo/Logo"
 import EventService from "../../API/EventService"
 import Loader from "../../Components/UI/loader/Loader"
 import cl from "./EventsPage.module.css"

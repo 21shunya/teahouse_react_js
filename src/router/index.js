@@ -1,6 +1,6 @@
 import MainPage from "../pages/MainPage";
-import ShopPage from "../pages/ShopPage";
-import ProductItemPage from "../pages/ProductItemPage";
+import ShopPage from "../pages/shop/ShopPage";
+import ProductItemPage from "../pages/shop/ProductItemPage";
 import ErrorPage from "../pages/Error/ErrorPage";
 import EventsPage from "../pages/Event/EventsPage";
 

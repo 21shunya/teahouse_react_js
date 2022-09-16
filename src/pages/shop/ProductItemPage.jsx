@@ -1,11 +1,11 @@
 import React from "react";
-import ShopHeader from "../Components/Shop/ShopHeader";
-import "../styles/ShPageItem.css"
+import ShopHeader from "../../Components/Shop/ShopHeader";
 import { useParams } from "react-router-dom";
-import { getItemById } from "../utils/ChangePages";
+import { getItemById } from "../../utils/ChangePages";
 import { useState } from "react";
-import ProductPageContent from "../Components/Shop/ProductItem/ProductPageContent";
-import Loader from "../Components/UI/loader/Loader";
+import ProductPageContent from "../../Components/Shop/ProductItem/ProductPageContent";
+import Loader from "../../Components/UI/loader/Loader";
+import cl from "../shop/ShopPage.module.css"
 
 function ProductItemPage() {
   const [isLoading, setLoading] = useState(true);
@@ -19,8 +19,8 @@ function ProductItemPage() {
   }, 2000);
   
   return (
-    <div className="sh-page-item">
-      <ShopHeader ProductItem />
+    <div className={cl.product_page}>
+      <ShopHeader productPage />
       {isLoading 
       ? <Loader />
       : <ProductPageContent productItem={productItem}/>

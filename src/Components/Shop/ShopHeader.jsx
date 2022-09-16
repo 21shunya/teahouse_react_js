@@ -1,28 +1,16 @@
 import React from "react";
 import ShopNavbar from "./ShopNavbar";
-import Logo from "../Logo"
-import RegularBtn from "../UI/buttons/RegularBtn";
-import { useNavigate } from 'react-router-dom';
-import ArrowIcon from "../UI/icons/ArrowIcon";
+import Logo from "../UI/logo/Logo"
+import cl from "./Shop.module.css"
 
 function ShopHeader(props) {
-  const navigate = useNavigate();
-  let productItem
-  if (props.ProductItem) productItem = 'product-item'
+  let headerClasses = [cl.header]
+  if (props.productPage) headerClasses.push(cl.product_header)
 
   return (
-    <div className={`shop-header ${productItem}`}>
+    <div className={headerClasses.join(' ')}>
       <Logo />
-      {productItem
-      ? <div className="pr-item-navbar">
-          <RegularBtn green onClick={() => navigate(-1)}>
-            <ArrowIcon left />
-            Каталог
-          </RegularBtn>
-          <ShopNavbar />
-        </div>
-      : <ShopNavbar />
-      }
+      <ShopNavbar productPage={props.productPage}/>
     </div>
   )
 }

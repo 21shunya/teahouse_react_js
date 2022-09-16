@@ -1,0 +1,29 @@
+.shop_page {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0px;
+  background: #0E170D;
+  height: 100vh;
+}
+
+.shop_page_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 90px;
+  gap: 30px;
+  align-self: stretch;
+  flex-grow: 1;
+}
+
+.product_page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px 90px;
+  gap: 30px;
+  background: #0E170D;
+  overflow: auto;
+}

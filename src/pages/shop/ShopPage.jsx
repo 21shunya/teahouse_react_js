@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import ProductsList from "../Components/Shop/ProductsList";
-import ShopHeader from "../Components/Shop/ShopHeader";
-import Input from "../Components/UI/inputs/Input";
-import "../styles/ShopPage.css"
-import Pagination from "../Components/UI/Pagination";
-import { getPaginatedItems } from "../utils/ChangePages"
-import Loader from "../Components/UI/loader/Loader";
+import ProductsList from "../../Components/Shop/ProductsList";
+import ShopHeader from "../../Components/Shop/ShopHeader";
+import Input from "../../Components/UI/inputs/Input";
+import Pagination from "../../Components/UI/Pagination";
+import { getPaginatedItems } from "../../utils/ChangePages"
+import Loader from "../../Components/UI/loader/Loader";
+import cl from "../shop/ShopPage.module.css"
 
 function ShopPage() {
   const [search, setSearch] = useState('');
@@ -31,8 +31,8 @@ function ShopPage() {
   }, [search])
 
   return (
-    <div className="shop-page">
-      <div className="shop-page-wrapper">
+    <div className={cl.shop_page}>
+      <div className={cl.shop_page_wrapper}>
         <ShopHeader />
         <Input 
           placeholder='Search...' 
