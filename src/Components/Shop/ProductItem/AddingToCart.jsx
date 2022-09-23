@@ -1,9 +1,8 @@
-import React from "react";
-import PrimaryBtn from "../../UI/buttons/PrimaryBtn";
-import QuantityChange from "../../UI/QuantityChange";
-import cl from "./ProductItem.module.css"
+import PrimaryBtn from '../../UI/buttons/PrimaryBtn';
+import QuantityChange from '../../UI/QuantityChange';
+import cl from './ProductItem.module.css';
 
-function AddingToCart({productItem}) {
+function AddingToCart({ productItem }) {
   return (
     <div className={cl.adding_to_cart}>
       <div className={cl.adding_to_cart_btns}>
@@ -15,7 +14,7 @@ function AddingToCart({productItem}) {
         <span>{productItem.costPerServing}р.</span>
       </div>
     </div>
-  )
+  );
 }
 
-export default AddingToCart
+export default AddingToCart;

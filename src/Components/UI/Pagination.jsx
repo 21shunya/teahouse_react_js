@@ -1,42 +1,42 @@
-import React from "react";
-import styled from "styled-components";
-import { decrementPage, incrementPage } from "../../utils/ChangePages";
-import ArrowIcon from "./icons/ArrowIcon";
-import NumberIcon from "./icons/NumberIcon";
+import styled from 'styled-components';
+import { decrementPage, incrementPage } from '../../utils/changePages';
+import ArrowIcon from './icons/ArrowIcon';
+import NumberIcon from './icons/NumberIcon';
 
-function Pagination({totalCount, limit, setPage, page}) {
-  const totalPages =  Math.ceil(totalCount / limit)
-  const pageArray = []
+// eslint-disable-next-line react/prop-types
+function Pagination({ totalCount, limit, page, setPage }) {
+  console.log();
+  const totalPages = Math.ceil(totalCount / limit);
+  const pageArray = [];
+  let isFilled = false;
   for (let i = 1; i <= totalPages; i++) {
-    pageArray.push(i)
+    console.log('in cycle');
+    pageArray.push(i);
   }
-
-  const StyledDiv = styled.div `
+  console.log(pageArray);
+  const StyledDiv = styled.div`
     display: flex;
     gap: 10px;
     order: 3;
-  `
+  `;
 
   return (
     <StyledDiv>
       <ArrowIcon left onClick={() => decrementPage(page, setPage)} />
-      {pageArray.map(p =>
-      page === p 
-      ? <NumberIcon
-          key={p}
-          onClick={() => setPage(p)}
-          filled>
-            {p}
-        </NumberIcon>
-      : <NumberIcon
-        key={p}
-        onClick={() => setPage(p)}>
-        {p}
-      </NumberIcon>
+      {pageArray.map((item) =>
+        item === page ? (
+          <NumberIcon key={item} onClick={() => setPage(item)} filled>
+            {item}
+          </NumberIcon>
+        ) : (
+          <NumberIcon key={item} onClick={() => setPage(item)} isFilled={isFilled}>
+            {item}
+          </NumberIcon>
+        ),
       )}
       <ArrowIcon right onClick={() => incrementPage(page, totalPages, setPage)} />
     </StyledDiv>
-  )
+  );
 }
 
-export default Pagination
+export default Pagination;

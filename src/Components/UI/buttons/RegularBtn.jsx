@@ -1,7 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const StyledBtn = styled.button `
+const StyledBtn = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -12,23 +11,21 @@ const StyledBtn = styled.button `
   font-size: 19px;
   line-height: 24px;
   letter-spacing: 0.07em;
-  color: ${({ green }) => green ? '#AEBC64' : '#F5F4F0'} ;
+  color: ${({ green }) => (green ? '#AEBC64' : '#F5F4F0')};
   padding: 0;
   background: transparent;
   border: none;
   gap: 10px;
   &:hover {
-    text-shadow: 0px 1px 20px #D7CFB9;
+    text-shadow: 0px 1px 20px #d7cfb9;
   }
   &:active {
     font-weight: 900;
   }
-`
+`;
 
 function RegularBtn(props) {
-  return (
-    <StyledBtn {...props} />
-  )
+  return <StyledBtn {...props} />;
 }
 
-export default RegularBtn
+export default RegularBtn;

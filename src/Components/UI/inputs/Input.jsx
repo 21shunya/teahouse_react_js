@@ -1,8 +1,6 @@
-import React from "react";
-import styled from "styled-components";
+import styled from 'styled-components';
 
-const StyledInput = styled.input
-`
+const StyledInput = styled.input`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -10,7 +8,7 @@ const StyledInput = styled.input
 
   width: 400px;
 
-  border: 2px solid #74755D;
+  border: 2px solid #74755d;
   border-radius: 100px;
   background: transparent;
 
@@ -22,13 +20,11 @@ const StyledInput = styled.input
 
   letter-spacing: 0.07em;
 
-  color: #74755D;
-`
+  color: #74755d;
+`;
 
 function Input(props) {
-  return (
-    <StyledInput {...props} />
-  )
+  return <StyledInput {...props} />;
 }
 
 export default Input;

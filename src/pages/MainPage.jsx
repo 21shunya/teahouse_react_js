@@ -1,8 +1,7 @@
-import React from "react";
-import Logo from "../Components/UI/logo/Logo";
-import MainPageNavbar from "../Components/MainPageNavbar";
-import info from "../aboutInfo.json"
-import cl from "./MainPage.module.css"
+import Logo from '../Components/UI/logo/Logo';
+import MainPageNavbar from '../Components/MainPageNavbar';
+import info from '../aboutInfo.json';
+import cl from './MainPage.module.css';
 
 function MainPage() {
   return (
@@ -14,13 +13,13 @@ function MainPage() {
         </div>
         <div className={cl.content}>
           <h2>{info.title}</h2>
-          {info.description.map((paragraph, index) =>
-          <p key={index}>{paragraph}</p>
-          )}
+          {info.description.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 export default MainPage;
