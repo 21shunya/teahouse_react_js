@@ -12,3 +12,21 @@ body{
 a {
   text-decoration:none
 }
+
+* {
+  scrollbar-width: thin;
+}
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+  box-shadow: 0 6px 10px 5px #74755D;
+}
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  border: #74755D 2px solid;
+  box-shadow: 0 0 10px 5px #74755D;
+}
+
