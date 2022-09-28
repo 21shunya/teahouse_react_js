@@ -31,7 +31,7 @@ export const ShopNavbar: React.FC<IShopNavbar> = (props) => {
         </RegularBtn>
       )}
       {buttonsList.map((btn) => (
-        <Link key={btn.path} to={btn.path}>
+        <Link key={btn.path} to={'/shop' + btn.path}>
           <RegularBtn green={false}>
             {btn.name}
             {btn.name !== 'Профиль' ? <NumberIcon filled>{btn.value}</NumberIcon> : null}
