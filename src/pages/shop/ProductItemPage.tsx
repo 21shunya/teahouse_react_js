@@ -38,7 +38,7 @@ const ProductItemPage: React.FC = () => {
     setLoading(true);
     setProductItem(getItemById(Number(id)));
     setLoading(false);
-  }, 2000);
+  }, 1000);
 
   return (
     <div className={cl.product_page}>

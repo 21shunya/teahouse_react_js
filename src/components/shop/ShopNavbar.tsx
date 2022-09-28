@@ -4,15 +4,17 @@ import { NumberIcon } from '../ui/icons/NumberIcon';
 import cl from './Shop.module.css';
 import ArrowIcon from '../ui/icons/ArrowIcon';
 import React from 'react';
+import { useTypedSelector } from '../../hooks/useTypedSelector';
 
 interface IShopNavbar {
   productPage: boolean;
 }
 
 export const ShopNavbar: React.FC<IShopNavbar> = (props) => {
+  const { totalCount } = useTypedSelector((state) => state.cart);
   const navigate = useNavigate();
   const buttonsList = [
-    { name: 'Корзина', value: 0, path: '/cart' },
+    { name: 'Корзина', value: totalCount, path: '/cart' },
     { name: 'Избранное', value: 0, path: '/favourite' },
     { name: 'Профиль', value: '', path: '/profile' },
   ];

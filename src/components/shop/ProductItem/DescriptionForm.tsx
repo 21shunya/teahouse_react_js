@@ -4,7 +4,7 @@ import React from 'react';
 import { SecondaryBtn } from '../../ui/buttons/SecondaryBtn';
 
 interface IDescriptionForm {
-  productItem: { portion: number; costPerServing: number };
+  productItem: { id: number; portion: number; costPerServing: number };
 }
 
 export const DescriptionForm: React.FC<IDescriptionForm> = ({ productItem }) => {

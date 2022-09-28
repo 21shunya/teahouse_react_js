@@ -28,7 +28,7 @@ export const ShopPage: React.FC = () => {
       setData(newData.data);
       setTotal(newData.totalLength);
       setLoading(false);
-    }, 2000);
+    }, 1000);
   }, [search, page]);
 
   useEffect(() => {

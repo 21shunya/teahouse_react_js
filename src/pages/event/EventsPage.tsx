@@ -28,7 +28,7 @@ const EventsPage: React.FC = () => {
     setLoading(true);
     setTimeout(() => {
       fetchData();
-    }, 1500);
+    }, 500);
   }, [page]);
 
   async function fetchData() {
