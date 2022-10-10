@@ -21,7 +21,6 @@ export const Pagination: React.FC<IPagination> = ({ totalCount, limit, page, set
   const totalPages = Math.ceil(totalCount / limit);
   const pageArray = [];
   for (let i = 1; i <= totalPages; i++) {
-    console.log('in cycle');
     pageArray.push(i);
   }
 

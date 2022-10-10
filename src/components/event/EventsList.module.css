@@ -1,6 +1,14 @@
-.list {
+.list_wrapper {
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 30px;
 
   font-family: 'Bellota Text';
   font-style: normal;
@@ -9,17 +17,15 @@
   line-height: 21px;
   text-align: center;
   letter-spacing: 0.07em;
-  color: whitesmoke;
-  gap: 16px;
+  color: #C1C0B4;
 }
 
-.list_item {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  text-align: left;
-  padding: 6px;
-  border: solid whitesmoke 1px;
-  border-style: dashed;
+.list_margin {
+  margin-top: -200px;
+}
+
+
+.observed_elem {
+  margin-top: 100px;
+  min-width: 100vh;
 }
