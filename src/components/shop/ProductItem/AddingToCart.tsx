@@ -1,9 +1,8 @@
 import QuantityChange from '../../ui/QuantityChange';
 import cl from './ProductItem.module.css';
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { addCartAction } from '../../../store/action-creators/cart';
 import { PrimaryBtn } from '../../ui/buttons/PrimaryBtn';
+import { useActions } from '../../../hooks/useActions';
 
 interface IAddingToCart {
   productItem: { id: number; portion: number; costPerServing: number };
@@ -11,10 +10,10 @@ interface IAddingToCart {
 
 export const AddingToCart: React.FC<IAddingToCart> = ({ productItem }) => {
   const quantity = 1;
-  const dispatch = useDispatch();
+  const { addCartAction } = useActions();
 
   const addToCart = () => {
-    dispatch(addCartAction(productItem.id));
+    addCartAction(productItem.id);
   };
 
   return (

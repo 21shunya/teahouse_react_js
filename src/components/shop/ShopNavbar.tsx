@@ -11,11 +11,12 @@ interface IShopNavbar {
 }
 
 export const ShopNavbar: React.FC<IShopNavbar> = (props) => {
-  const { totalCount } = useTypedSelector((state) => state.cart);
+  const CartTotalCount = useTypedSelector((state) => state.cart.totalCount);
+  const FavorTotalCount = useTypedSelector((state) => state.favorite.totalCount);
   const navigate = useNavigate();
   const buttonsList = [
-    { name: 'Корзина', value: totalCount, path: '/cart' },
-    { name: 'Избранное', value: 0, path: '/favourite' },
+    { name: 'Корзина', value: CartTotalCount, path: '/cart' },
+    { name: 'Избранное', value: FavorTotalCount, path: '/favourite' },
     { name: 'Профиль', value: '', path: '/profile' },
   ];
 
