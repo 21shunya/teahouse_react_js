@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { ProductsList } from '../../components/shop/ProductsList';
-import { ShopHeader } from '../../components/shop/ShopHeader';
 import { Input } from '../../components/ui/inputs/Input';
 import Pagination from '../../components/ui/Pagination';
 import { getPaginatedItems } from '../../utils/changePages';
 import { Loader } from '../../components/ui/loader/Loader';
-import cl from '../shop/ShopPage.module.css';
+import cl from './ShopPage.module.css';
 
 export const ShopPage: React.FC = () => {
   const [search, setSearch] = useState('');
@@ -36,20 +35,16 @@ export const ShopPage: React.FC = () => {
   }, [search]);
 
   return (
-    <div className={cl.shop_page}>
-      <div className={cl.shop_page_wrapper}>
-        <ShopHeader productPage={false} />
-        <Input
-          placeholder="Search..."
-          style={{ alignSelf: 'flex-end' }}
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          type="text"
-        />
-        {isLoading ? <Loader /> : <ProductsList productsList={data} />}
-        <Pagination totalCount={total} limit={limit} setPage={setPage} page={page} />
-      </div>
-      <img src="shop-page-picture.png" alt="" />
+    <div className={cl.shop_page_wrapper}>
+      <Input
+        placeholder="Search..."
+        style={{ alignSelf: 'flex-end' }}
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        type="text"
+      />
+      {isLoading ? <Loader /> : <ProductsList productsList={data} />}
+      <Pagination totalCount={total} limit={limit} setPage={setPage} page={page} />
     </div>
   );
 };

@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
-import { ShopHeader } from '../../components/shop/ShopHeader';
 import { useParams } from 'react-router-dom';
 import { getItemById } from '../../utils/changePages';
 import { ProductPageContent } from '../../components/shop/ProductItem/ProductPageContent';
 import { Loader } from '../../components/ui/loader/Loader';
-import cl from '../shop/ShopPage.module.css';
 
 interface IProductItem {
   id: number;
@@ -40,12 +38,7 @@ const ProductItemPage: React.FC = () => {
     setLoading(false);
   }, 1000);
 
-  return (
-    <div className={cl.product_page}>
-      <ShopHeader productPage />
-      {isLoading ? <Loader /> : <ProductPageContent productItem={productItem} />}
-    </div>
-  );
+  return isLoading ? <Loader /> : <ProductPageContent productItem={productItem} />;
 };
 
 export default ProductItemPage;
